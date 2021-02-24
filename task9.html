@@ -18,20 +18,21 @@
           var Video_0 = document.querySelector("#Video_Asset_0");
           var button_H = document.querySelector("#mutebuttonH");
           var button_K = document.querySelector("#mutebuttonK");
-          button.hidden = true;
+          button_K.hidden = true;
+          button_H.hidden = true;
           Video_0.pause();
 		  Video_1.pause();
 
           K_marker.addEventListener("markerFound", function (evt) {
             markerFound = 1;
             button_K.hidden = false;
-            // Video_0.play();  // if you want the video 
+            //Video_1.play();  // if you want the video 
             // to start immediently on marker detection, uncomment this
           });
           H_marker.addEventListener("markerFound", function (evt) {
             markerFound = 1;
             button_H.hidden = false;
-            // Video_0.play();  // if you want the video 
+            //Video_0.play();  // if you want the video 
             // to start immediently on marker detection, uncomment this
           });
 
@@ -75,8 +76,7 @@
           });
 
           // button for full screen
-          fullbutton.addEventListener("click",
-            function (evt){
+          fullbutton.addEventListener("click", function (evt){
               if (fullscreen == 0) {
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
