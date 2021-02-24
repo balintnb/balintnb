@@ -19,6 +19,7 @@
           var button = document.querySelector("#mutebutton");
           button.hidden = true;
           Video_0.pause();
+		  Video_1.pause();
 
           marker.addEventListener("markerFound", function (evt) {
             markerFound = 1;
@@ -30,6 +31,7 @@
           marker.addEventListener("markerLost", function (evt) {
             markerFound = 0;
             Video_0.pause();
+            Video_1.pause();
             button.hidden = true;
           });
 
@@ -44,6 +46,15 @@
               button.innerHTML="Play";
               Video_0.muted=true;
               Video_0.pause();
+            }
+            if(Video_1.muted==true){
+              button.innerHTML="Pause";
+              Video_1.muted=false;
+              Video_1.play();
+            }else{
+              button.innerHTML="Play";
+              Video_1.muted=true;
+              Video_1.pause();
             }
           });
 
