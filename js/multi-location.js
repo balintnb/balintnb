@@ -2,7 +2,7 @@
 
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = 'gomb';
+    button.innerText = '?';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -13,8 +13,8 @@ function staticLoadPlaces() {
         {
             name: 'Pokèmon',
             location: {
-                lat: 47.4733
-                lng: 19.0379
+                lat: 47.473400
+                lng: 19.037870
             },
         },
     ];
@@ -23,19 +23,19 @@ function staticLoadPlaces() {
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
-        scale: '5 5 5',
+        scale: '0.05 0.05 0.05',
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
     },
     {
         url: './assets/articuno/scene.gltf',
-        scale: '2 2 2',
+        scale: '0.02 0.02 0.02',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
     },
     {
         url: './assets/dragonite/scene.gltf',
-        scale: '8 8 8',
+        scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
     },
